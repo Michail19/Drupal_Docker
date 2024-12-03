@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean
 
 # Копируем проект
-COPY ./src /var/www/html
+# COPY ./src /var/www/html
 
 # Указываем порты
 EXPOSE 80
