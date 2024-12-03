@@ -2,7 +2,10 @@ version: '3.8'
 
 services:
   drupal:
-    image: drupal:10
+    build:
+      context: .  # Указываем контекст сборки - текущий каталог
+      dockerfile: Dockerfile  # Указываем имя Dockerfile, если оно отличается от default
+    image: custom-drupal:latest  # Ваш образ, собранный с Dockerfile
     ports:
       - "8080:80"
     environment:
